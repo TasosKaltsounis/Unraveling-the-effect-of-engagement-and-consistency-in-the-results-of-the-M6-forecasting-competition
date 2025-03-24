@@ -16,8 +16,8 @@ The replication package consists of 6 scripts written in Python Programming Lang
 
 The Data used for this study were provided in the M6 Forecasting competition.
 
-- submissions.csv | Contains all the submissions of all teams throughout the competition
-- assets.csv | Contains all the assets used in the M6 Forecasting Competition
+- submissions.csv | Contains all the submissions of all teams throughout the competition (https://github.com/Mcompetitions/M6-methods/tree/main/IJF%20paper)
+- assets.csv | Contains all the assets used in the M6 Forecasting Competition (https://github.com/Mcompetitions/M6-methods/tree/main)
 - stocks_etfs.xlsx | Contains all the assets used in the M6 Forecasting Competition with a flag as to whether they are stocks or ETFs
 
 Plots used in the manuscript are stored in the 'Results' folder. Linear regression model results are printed by the scripts.
