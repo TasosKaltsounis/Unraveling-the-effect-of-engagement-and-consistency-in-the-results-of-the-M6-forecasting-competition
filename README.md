@@ -22,4 +22,5 @@ The Data used for this study were provided in the M6 Forecasting competition.
 
 Plots used in the manuscript are stored in the 'Results' folder. Linear regression model results are printed by the scripts.
 
+All libraries used and their versions are shown in the requirements.txt file.
 
