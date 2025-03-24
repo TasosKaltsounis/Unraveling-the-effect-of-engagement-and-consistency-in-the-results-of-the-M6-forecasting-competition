@@ -21,12 +21,13 @@ The replication package consists of 6 scripts written in Python Programming Lang
 
 
 The Data used for this study were provided in the M6 Forecasting competition.
--submissions.csv
+
+- submissions.csv
     Contains all the submissions of all teams throughout the competition
--assets.csv
+- assets.csv
     Contains all the assets used in the M6 Forecasting Competition
--stocks_etfs.xlsx
+- stocks_etfs.xlsx
     Contains all the assets used in the M6 Forecasting Competition with a flag as to whether they are stocks or ETFs
-    
+
 
 
