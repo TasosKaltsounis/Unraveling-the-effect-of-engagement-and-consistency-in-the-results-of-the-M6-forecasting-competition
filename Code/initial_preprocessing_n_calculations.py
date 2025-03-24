@@ -5,9 +5,6 @@ import os
 import warnings
 warnings.filterwarnings('ignore')
 
-# set current working directory
-os.chdir("C:/Users/TasosK/Desktop/Tasos/A-Research/M6 Discussion Paper/Submission_Workspace")
-
 def IR_modified_calculation(hist_data, submission, IR_flag=True):
 
     # Function for computing IR

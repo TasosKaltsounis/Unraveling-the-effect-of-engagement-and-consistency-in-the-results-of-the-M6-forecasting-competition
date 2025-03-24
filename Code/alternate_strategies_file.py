@@ -5,8 +5,6 @@ import os
 import warnings
 warnings.filterwarnings('ignore')
 
-# set current working directory
-os.chdir("C:/Users/TasosK/Desktop/Tasos/A-Research/M6 Discussion Paper/Submission_Workspace")
 
 ############################## DATA IMPORTS ##############################
 
