@@ -1,10 +1,13 @@
 # Replication package for "Unraveling the effect of engagement and consistency in the results of the M6 forecasting competition", International Journal of Forecasting
 
-Anastasios Kaltsounis, Evangelos Theodorou, Evangelos Spiliotis & Vassilios Assimakopoulos
+Anastasios Kaltsounis (tkaltsounis@fsu.gr), Evangelos Theodorou, Evangelos Spiliotis & Vassilios Assimakopoulos
 
 ## Overview 
 
-The replication package consists of 6 scripts written in Python Programming Language. The scripts should be executed in the following order:
+The replication package consists of 3 Folders - Code, Data & Results.
+- The folder 'Data' contains all data needed to execute the experiments and produce the results shown in the manuscript.
+- The folder 'Results' contains all the plots shown in the manuscript.
+- The folder 'Code' contains 6 scripts written in Python Programming Language. The scripts should be executed in the following order:
 
 1. initial_preprocessing_n_calculations.py | Performs data pre-processing on the data provided by the organizers of the M6 forecasting competition. The files created are used in the next scripts for producing plots and results for the paper.
 2. Main_Analysis_n_Plots.py | Calculates most of the results shown in the manuscript and outputs several plots that describe said results.
@@ -23,4 +26,6 @@ The Data used for this study were provided by the organizers of the M6 forecasti
 Plots used in the manuscript are stored in the 'Results' folder. Linear regression model results are printed by the scripts.
 
 All libraries used and their versions are shown in the requirements.txt file.
+
+Reproducibility package assembled on 26/03/2025.
 
