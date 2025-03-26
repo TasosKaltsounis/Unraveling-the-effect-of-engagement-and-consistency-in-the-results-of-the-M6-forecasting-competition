@@ -34,9 +34,9 @@ Reproducibility package was assembled on 26/03/2025.
 
 The scripts were executed on a comuter with the following specs:
 
-Processor 13th Gen Intel(R) Core(TM) i7-13700K   3.40 GHz
-Installed RAM 64.0 GB (63.6 GB usable)
-System type 64-bit operating system, x64-based processor
+Processor 13th Gen Intel(R) Core(TM) i7-13700K   3.40 GHz  
+Installed RAM 64.0 GB (63.6 GB usable)  
+System type 64-bit operating system, x64-based processor  
 
 The time needed to complete each script is mentioned below:
 1. initial_preprocessing_n_calculations.py - 867 seconds | ~14 minutes
