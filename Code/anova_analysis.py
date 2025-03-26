@@ -4,6 +4,8 @@ import warnings
 warnings.filterwarnings('ignore')
 from scipy.stats import f_oneway
 from sklearn.cluster import KMeans
+import time
+start= time.time()
 
 ############################## DATA IMPORTS ##############################
 # exported from the "paper_submission_code.py" script
@@ -63,3 +65,7 @@ temp = possible_anova_crit_diff[possible_anova_crit_diff["Anova pvalue"]<0.05]
 
 print(temp)
 
+end = time.time()
+print(end - start)
+
+# 1 second

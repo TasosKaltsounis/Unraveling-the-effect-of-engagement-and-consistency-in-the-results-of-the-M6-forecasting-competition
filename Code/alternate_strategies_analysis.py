@@ -6,7 +6,8 @@ import statsmodels.api as sm
 import os
 import warnings
 warnings.filterwarnings('ignore')
-
+import time 
+start=time.time()
 
 ############################## DATA IMPORTS ##############################
 # exported from the "alternate_strategies_file.py" script
@@ -127,8 +128,10 @@ est2 = est.fit()
 print(est2.summary())
 
 
+end = time.time()
+print(end - start)
 
-
+# 1 second
 
 
 

@@ -14,7 +14,8 @@ import statsmodels.api as sm
 import os
 import warnings
 warnings.filterwarnings('ignore')
-
+import time
+start = time.time()
 
 def IR_calculation(hist_data, submission, IR_flag=True):
 
@@ -669,9 +670,10 @@ print(est2.summary())
 
 
 
+end = time.time()
+print(end - start)
 
-
-
+# 21 seconds
 
 
 

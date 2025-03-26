@@ -4,6 +4,8 @@ from statistics import stdev
 import os
 import warnings
 warnings.filterwarnings('ignore')
+import time
+start = time.time()
 
 def IR_modified_calculation(hist_data, submission, IR_flag=True):
 
@@ -329,8 +331,10 @@ for team_id in daily_returns_per_team.index:
 
 daily_returns_per_team.to_excel("./Data/Daily_returns.xlsx")
 
-
-
+# 867 seconds
+# ~14 minutes
+end = time.time()
+print(end - start)
 
 
 

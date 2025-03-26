@@ -4,7 +4,8 @@ from sklearn import linear_model
 from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 from scipy import stats
-
+import time
+start=time.time()
 ############################## DATA IMPORTS ##############################
 # exported from the "alternate_strategies_file.py" script
 overview_df_path = "./Data/Alternate_strategies_final_IR.csv"
@@ -40,8 +41,10 @@ print(est2.summary())
 print(est2.params)
 
 
+end = time.time()
+print(end - start)
 
-
+# 1 second
 
 
 

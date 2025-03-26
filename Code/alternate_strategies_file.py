@@ -4,7 +4,8 @@ from statistics import stdev
 import os
 import warnings
 warnings.filterwarnings('ignore')
-
+import time
+start=time.time()
 
 ############################## DATA IMPORTS ##############################
 
@@ -176,3 +177,10 @@ for team_id in ir_global_overview.index:
 
 overview_df["Global"] = original_global_ir["Global"]
 overview_df.to_csv("./Data/Alternate_strategies_final_IR.csv")
+
+
+end = time.time()
+print(end - start)
+
+# 927 seconds
+# ~ 15 minutes
