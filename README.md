@@ -29,3 +29,20 @@ All libraries used and their versions are shown in the requirements.txt file.
 
 Reproducibility package was assembled on 26/03/2025.
 
+
+### Environment 
+
+The scripts were executed on a comuter with the following specs:
+
+Processor 13th Gen Intel(R) Core(TM) i7-13700K   3.40 GHz
+Installed RAM 64.0 GB (63.6 GB usable)
+System type 64-bit operating system, x64-based processor
+
+The time needed to complete each script is mentioned below:
+1. initial_preprocessing_n_calculations.py - 867 seconds | ~14 minutes
+2. Main_Analysis_n_Plots.py - 21 seconds
+3. alternate_strategies_file.py -  927 seconds | ~15 minutes
+4. alternate_strategies_analysis.py - 1 second
+5. linear_regression_analysis.py - 1 second
+6. anova_analysis.py -  1 second
+
