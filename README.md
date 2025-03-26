@@ -40,7 +40,7 @@ System type 64-bit operating system, x64-based processor
 
 The time needed to complete each script is mentioned below:
 1. initial_preprocessing_n_calculations.py - 867 seconds | ~14 minutes
-2. Main_Analysis_n_Plots.py - 21 seconds
+2. Main_Analysis_n_Plots.py - 13 seconds
 3. alternate_strategies_file.py -  927 seconds | ~15 minutes
 4. alternate_strategies_analysis.py - 1 second
 5. linear_regression_analysis.py - 1 second

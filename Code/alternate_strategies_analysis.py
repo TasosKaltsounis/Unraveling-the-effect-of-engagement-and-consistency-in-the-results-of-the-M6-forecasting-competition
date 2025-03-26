@@ -76,8 +76,8 @@ plt.yticks(fontsize=8)
 plt.gca().set_xticklabels([str(x) for x in list(range(1,13))])
 plt.grid()
 
-plt.savefig("./Results/SV_top_x_alternate.eps", format='eps')
-plt.savefig("./Results/SV_top_x_alternate.png")
+plt.savefig("./Results/AA_top_x_alternate.eps", format='eps') # Figure 3b
+plt.savefig("./Results/AA_top_x_alternate.png")
 
 
        
@@ -103,8 +103,8 @@ plt.yticks(fontsize=12)
 plt.gca().set_xticklabels([str(x) for x in list(range(1,12))])
 plt.grid()
 
-plt.savefig("./Results/SV_avg_delta_alternate_strategies.eps", bbox_inches='tight', format='eps')
-plt.savefig("./Results/SV_avg_delta_alternate_strategies.png", bbox_inches='tight')
+plt.savefig("./Results/AA_avg_delta_alternate_strategies.eps", bbox_inches='tight', format='eps') # Figure 2
+plt.savefig("./Results/AA_avg_delta_alternate_strategies.png", bbox_inches='tight')
 
 # regression to get the r and p values for the group of 12 submissions
 # They are shown in the manuscript as a footnote (number 3) reffering to the clear trend that the plot shows

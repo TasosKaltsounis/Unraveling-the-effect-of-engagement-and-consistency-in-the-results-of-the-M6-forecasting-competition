@@ -268,8 +268,8 @@ plt.ylabel('IR', fontsize=22)
 plt.yticks(fontsize=18)
 plt.xticks(fontsize=16, rotation=45)
 plt.tight_layout()
-plt.savefig("./Results/SV_SNS_IR_vs_AII_boxplot_all_grouped.eps", format='eps') 
-plt.savefig("./Results/SV_SNS_IR_vs_AII_boxplot_all_grouped.png") 
+plt.savefig("./Results/R2_SNS_IR_vs_AII_boxplot_all_grouped.eps", format='eps') # Figure 1b
+plt.savefig("./Results/R2_SNS_IR_vs_AII_boxplot_all_grouped.png") 
 
 
 
@@ -305,8 +305,8 @@ g.set_ylabel('IR', fontsize=25)
 plt.yticks(fontsize=18)
 plt.xticks(fontsize=18)
 plt.tight_layout()
-plt.savefig("./Results/SV_SNS_IR_vs_Unique_submissions.eps", format='eps')
-plt.savefig("./Results/SV_SNS_IR_vs_Unique_submissions.png") 
+plt.savefig("./Results/R2_SNS_IR_vs_Unique_submissions.eps", format='eps') # Figure 1a
+plt.savefig("./Results/R2_SNS_IR_vs_Unique_submissions.png") 
 
 strategy_changes = strategy_changes.iloc[:,1:]
 strategy_changes.loc["Benchmark", "strategies"] = 1
@@ -357,8 +357,8 @@ plt.yticks(fontsize=18)
 plt.xticks(fontsize=18)
 plt.gca().set_xticklabels([0,1,2,3,4,5,6,7,8])
 plt.tight_layout()
-plt.savefig("./Results/SV_SNS_IR_vs_strategy_changes_boxplot.eps", format='eps')
-plt.savefig("./Results/SV_SNS_IR_vs_strategy_changes_boxplot.png") 
+plt.savefig("./Results/R2_SNS_IR_vs_strategy_changes_boxplot.eps", format='eps') # Figure 1c
+plt.savefig("./Results/R2_SNS_IR_vs_strategy_changes_boxplot.png") 
 
 temp = Active_teams_IR_per_eval_period.sort_values(by="Global IR", ascending=False)
 first_team_sub = temp.iloc[0,]; second_team_sub = temp.iloc[1,]; third_team_sub = temp.iloc[2,]; fourth_team_sub = temp.iloc[3,]; fifth_team_sub = temp.iloc[4,]
@@ -410,8 +410,8 @@ plt.gca().lines[10].set_linestyle("--")
 plt.gca().lines[11].set_linestyle("--")
 plt.ylabel('Cumulative Return')
 plt.grid()
-plt.savefig("./Results/SV_SNS_Cumulative_Returns_top_10_Bench_n_IVV.eps", format='eps')
-plt.savefig("./Results/SV_SNS_Cumulative_Returns_top_10_Bench_n_IVV.png") 
+plt.savefig("./Results/AA_SNS_Cumulative_Returns_top_10_Bench_n_IVV.eps", format='eps') # Figure 8
+plt.savefig("./Results/AA_SNS_Cumulative_Returns_top_10_Bench_n_IVV.png") 
 
 # plot average ir vs global ir along with regression lines
 temporary_df = pd.DataFrame(Active_teams_IR_per_eval_period["Global IR"])
@@ -448,8 +448,8 @@ plt.yticks(fontsize=12)
 plt.xticks(fontsize=12)
 
 plt.tight_layout()
-g.savefig('./Results/SV_SNS_Average_IR_VS_Global_IR.eps', format='eps')
-g.savefig("./Results/SV_SNS_Average_IR_VS_Global_IR.png") 
+g.savefig('./Results/AA_SNS_Average_IR_VS_Global_IR.eps', format='eps') # Figure 5
+g.savefig("./Results/AA_SNS_Average_IR_VS_Global_IR.png") 
 
 # regression to get the r and p values for the regression between monthly and global IR
 # They are shown in the manuscript in Figure 5 caption
@@ -476,8 +476,8 @@ g.set_ylabel('IR', fontsize=14)
 plt.yticks(fontsize=12)
 plt.xticks(fontsize=12)
 plt.tight_layout()
-plt.savefig("./Results/SV_SNS_Monthly_IR_Boxplots_for_top_10_teams.eps", format='eps')
-plt.savefig("./Results/SV_SNS_Monthly_IR_Boxplots_for_top_10_teams.png") 
+plt.savefig("./Results/AA_SNS_Monthly_IR_Boxplots_for_top_10_teams.eps", format='eps') # Figure 9
+plt.savefig("./Results/AA_SNS_Monthly_IR_Boxplots_for_top_10_teams.png") 
 
 
 
@@ -520,8 +520,8 @@ g.set_ylabel('Rank', fontsize=16)
 plt.yticks(fontsize=12, rotation=90)
 plt.xticks(fontsize=12)
 
-plt.savefig("./Results/SV_SNS_Rank_vs_Submissions.eps", format='eps')
-plt.savefig("./Results/SV_SNS_Rank_vs_Submissions.png")
+plt.savefig("./Results/AA_SNS_Rank_vs_Submissions.eps", format='eps') # Figure 3a
+plt.savefig("./Results/AA_SNS_Rank_vs_Submissions.png")
 
 
 
@@ -582,8 +582,8 @@ sns.scatterplot(data=temp_bench_irs, x='index', y='IR', ax=ax2, color='#7d4d6c')
 ax2.set_ylabel('IR', fontsize=14)
 plt.xticks(fontsize=12)
 plt.yticks(fontsize=12)
-plt.savefig("./Results/SV_SNS_1_vs_12_sub_pct_over_bench.eps", bbox_inches='tight', format='eps')
-plt.savefig("./Results/SV_SNS_1_vs_12_sub_pct_over_bench.png", bbox_inches='tight')
+plt.savefig("./Results/AA_AA_SNS_1_vs_12_sub_pct_over_bench.eps", bbox_inches='tight', format='eps') # Figure 4
+plt.savefig("./Results/AA_AA_SNS_1_vs_12_sub_pct_over_bench.png", bbox_inches='tight')
 
 teams_df = pd.DataFrame(index = pd.unique(submissions.Team), columns=["Stocks_pct", "ETFs_pct"])
 
@@ -613,8 +613,8 @@ ax = sns.regplot(data=temp1, x="Rank", y="Stocks_pct", ci=None, color="#172c69")
 ax.set_ylabel("% Stocks")
 ax.lines[0].set_linestyle("--")
 plt.tight_layout()
-plt.savefig('./Results/SV_SNS_Stock_pct_vs_Rank_per_n.eps', format='eps')
-plt.savefig('./Results/SV_SNS_Stock_pct_vs_Rank_per_n.png')
+plt.savefig('./Results/AA_SNS_Stock_pct_vs_Rank_per_n.eps', format='eps') # Figure 7b
+plt.savefig('./Results/AA_SNS_Stock_pct_vs_Rank_per_n.png')
 
 # regression to get the r and p values for the regression between risk and rank
 # They are shown in the manuscript in the caption of Figure 7a
@@ -639,8 +639,8 @@ plt.yticks(fontsize=12)
 plt.xticks(fontsize=12)
 plt.grid()
 plt.tight_layout()
-plt.savefig('./Results/SV_SNS_sdMIR_vs_Rank_per_n.eps', format='eps')
-plt.savefig('./Results/SV_SNS_sdMIR_vs_Rank_per_n.png')
+plt.savefig('./Results/AA_SNS_sdMIR_vs_Rank_per_n.eps', format='eps') # Figure 6
+plt.savefig('./Results/AA_SNS_sdMIR_vs_Rank_per_n.png')
 
 
 temp1 = temp[["Rank", "Global Risk"]]
@@ -653,8 +653,8 @@ ax.lines[0].set_linestyle("--")
 ax.set_xlabel('Rank', fontsize=10)
 ax.set_ylabel('Global Risk', fontsize=10)
 plt.tight_layout()
-plt.savefig('./Results/SV_SNS_global_risk_vs_Rank_per_n.eps', format='eps')
-plt.savefig('./Results/SV_SNS_global_risk_vs_Rank_per_n.png')
+plt.savefig('./Results/AA_SNS_global_risk_vs_Rank_per_n.eps', format='eps') # Figure 7a
+plt.savefig('./Results/AA_SNS_global_risk_vs_Rank_per_n.png')
 
 
 # regression to get the r and p values for the regression between risk and rank
@@ -673,7 +673,7 @@ print(est2.summary())
 end = time.time()
 print(end - start)
 
-# 21 seconds
+# 13 seconds
 
 
 
