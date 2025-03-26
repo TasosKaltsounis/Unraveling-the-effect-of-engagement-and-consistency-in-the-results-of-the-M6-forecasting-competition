@@ -27,5 +27,5 @@ Plots used in the manuscript are stored in the 'Results' folder. Linear regressi
 
 All libraries used and their versions are shown in the requirements.txt file.
 
-Reproducibility package assembled on 26/03/2025.
+Reproducibility package was assembled on 26/03/2025.
 
