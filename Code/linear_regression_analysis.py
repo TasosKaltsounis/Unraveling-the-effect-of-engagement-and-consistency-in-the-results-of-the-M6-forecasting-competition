@@ -5,14 +5,21 @@ from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 from scipy import stats
 import time
+import os
 start=time.time()
+
+# set the script's location to be the current working directory
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
+
 ############################## DATA IMPORTS ##############################
 # exported from the "alternate_strategies_file.py" script
-overview_df_path = "./Data/Alternate_strategies_final_IR.csv"
+overview_df_path = "../Data/Alternate_strategies_final_IR.csv"
 # exported from the "paper_submission_code.py" script
-df_general_info_path = "./Data/Df_general_info.csv"
+df_general_info_path = "../Data/Df_general_info.csv"
 
-strategy_changes_path = "./Data/strategy_changes_data.csv"
+strategy_changes_path = "../Data/strategy_changes_data.csv"
 
 overview_df = pd.read_csv(overview_df_path, index_col=0)
 df_general_info = pd.read_csv(df_general_info_path, index_col=0)

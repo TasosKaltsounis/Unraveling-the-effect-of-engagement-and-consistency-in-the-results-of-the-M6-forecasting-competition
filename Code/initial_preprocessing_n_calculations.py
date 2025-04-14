@@ -7,6 +7,12 @@ warnings.filterwarnings('ignore')
 import time
 start = time.time()
 
+# set the script's location to be the current working directory
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
+
+
 def IR_modified_calculation(hist_data, submission, IR_flag=True):
 
     # Function for computing IR
@@ -50,11 +56,11 @@ def IR_modified_calculation(hist_data, submission, IR_flag=True):
     return output
 
 # Read asset prices data (as provided by the M6 submission platform)
-asset_data = pd.read_csv("./Data/assets_m6.csv")
+asset_data = pd.read_csv("../Data/assets_m6.csv")
 asset_data.date = pd.to_datetime(asset_data.date)
 
 # Read submissions file (similar to the template provided by the M6 submission platform)
-all_submissions = pd.read_csv("./Data/submissions.csv")
+all_submissions = pd.read_csv("../Data/submissions.csv")
 all_submissions = all_submissions.iloc[:,:-3]
 all_submissions = all_submissions[['Team', 'Submission', 'Evaluation', 'Symbol', 'Rank1',
        'Rank2', 'Rank3', 'Rank4', 'Rank5', 'Decision']]
@@ -148,10 +154,10 @@ for team_id in ir_overview.index:
     print("Calculated for team with id: ", team_id, ". Teams finished: ", cntr, "/", len(ir_overview.index))
 
 # # export to seperate file
-ir_overview.to_excel("./Data/All_teams_monthly_IR.xlsx")
+ir_overview.to_excel("../Data/All_teams_monthly_IR.xlsx")
 # fix submission for team bc4b0314 which is irregular for the last 3 months
 ret_overview[:40] = ret_overview[:40].fillna(0)
-ret_overview.to_excel("./Data/All_teams_monthly_Returns.xlsx")
+ret_overview.to_excel("../Data/All_teams_monthly_Returns.xlsx")
 
 # form a df with the quarter evaluation periods of the M6 Forecasting Competition
 quarter_info = pd.DataFrame(index = ["q1", "q2", "q3", "q4"], columns = ["1st_month", "2nd_month", "3rd_month"])
@@ -217,8 +223,8 @@ for team_id in ret_quarterly_overview.index:
             print("Team ", team_id, "has no data for evaluation period ", eval_id)
 
 # export to seperate file
-ret_quarterly_overview.to_excel("./Data/All_teams_Quarterly_Returns.xlsx")
-ir_quarterly_overview.to_excel("./Data/All_teams_Quarterly_IR.xlsx")
+ret_quarterly_overview.to_excel("../Data/All_teams_Quarterly_Returns.xlsx")
+ir_quarterly_overview.to_excel("../Data/All_teams_Quarterly_IR.xlsx")
 
 
 # Calculate Global Returns 
@@ -274,9 +280,9 @@ for team_id in ret_global_overview.index:
         print("Team ", team_id, "has no data for evaluation period ", eval_id)
 
 # export to seperate file
-ret_global_overview.to_excel("./Data/All_teams_Global_Returns.xlsx")
-ir_global_overview.to_excel("./Data/All_teams_Global_IR.xlsx")
-risk_global_overview.to_excel("./Data/All_teams_Global_Risk.xlsx")
+ret_global_overview.to_excel("../Data/All_teams_Global_Returns.xlsx")
+ir_global_overview.to_excel("../Data/All_teams_Global_IR.xlsx")
+risk_global_overview.to_excel("../Data/All_teams_Global_Risk.xlsx")
 
 
 ##########################################################################################################################################################
@@ -329,7 +335,7 @@ for team_id in daily_returns_per_team.index:
     
     daily_returns_per_team.loc[team_id][-len(quarterly_daily_returns):] = quarterly_daily_returns
 
-daily_returns_per_team.to_excel("./Data/Daily_returns.xlsx")
+daily_returns_per_team.to_excel("../Data/Daily_returns.xlsx")
 
 # 867 seconds
 # ~14 minutes

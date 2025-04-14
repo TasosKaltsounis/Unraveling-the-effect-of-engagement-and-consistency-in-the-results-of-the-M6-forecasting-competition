@@ -7,10 +7,15 @@ warnings.filterwarnings('ignore')
 import time
 start=time.time()
 
+# set the script's location to be the current working directory
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
+
 ############################## DATA IMPORTS ##############################
 
-asset_data_path = "./Data/assets_m6.csv"
-sub_path = "./Data/submissions.csv"
+asset_data_path = "../Data/assets_m6.csv"
+sub_path = "../Data/submissions.csv"
 
 # Read asset prices data (as provided by the M6 submission platform)
 asset_data = pd.read_csv(asset_data_path)
@@ -106,7 +111,7 @@ asset_id = sorted(asset_id)
 team_id = ir_global_overview.index[3]
 teams_submissions = all_submissions.loc[all_submissions.Team==team_id]
 
-original_global_ir = pd.read_excel("./Data/All_teams_Global_IR.xlsx", index_col=0)
+original_global_ir = pd.read_excel("../Data/All_teams_Global_IR.xlsx", index_col=0)
 original_global_ir = original_global_ir.dropna(axis=0)
 original_global_ir = original_global_ir.rename(index={"32cdcc24": "Benchmark"})
 
@@ -176,7 +181,7 @@ for team_id in ir_global_overview.index:
 
 
 overview_df["Global"] = original_global_ir["Global"]
-overview_df.to_csv("./Data/Alternate_strategies_final_IR.csv")
+overview_df.to_csv("../Data/Alternate_strategies_final_IR.csv")
 
 
 end = time.time()

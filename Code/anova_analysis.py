@@ -5,13 +5,19 @@ warnings.filterwarnings('ignore')
 from scipy.stats import f_oneway
 from sklearn.cluster import KMeans
 import time
+import os
 start= time.time()
+
+# set the script's location to be the current working directory
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
 
 ############################## DATA IMPORTS ##############################
 # exported from the "paper_submission_code.py" script
-df_general_info_path = "./Data/Df_general_info.csv"
-global_risk_path = "./Data/All_teams_Global_Returns.xlsx"
-global_returns_path = "./Data/All_teams_Global_Risk.xlsx"
+df_general_info_path = "../Data/Df_general_info.csv"
+global_risk_path = "../Data/All_teams_Global_Returns.xlsx"
+global_returns_path = "../Data/All_teams_Global_Risk.xlsx"
 
 
 df_general_info = pd.read_csv(df_general_info_path, index_col=0)
